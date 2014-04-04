@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RemoteConfig</class>
+ <widget class="QWidget" name="RemoteConfig">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>181</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Description :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="SlimLineEdit" name="slimLineEdit_description" native="true"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="toolTip">
+        <string>Wanted Expression</string>
+       </property>
+       <property name="text">
+        <string>Policy :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="RemoteWantedEdit" name="remoteWantedEdit" native="true"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Trust Level :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="comboBox_trust">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Trust</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Semitrust</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Untrust</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dead</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Groups :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="TagListWidget" name="tags_groups"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkBox_ignore">
+     <property name="text">
+      <string>Use in Git Annex</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkBox_sync">
+     <property name="text">
+      <string>Enable Synchronization</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkBox_readonly">
+     <property name="text">
+      <string>Read Only</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RemoteWantedEdit</class>
+   <extends>QWidget</extends>
+   <header>remotewantededit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SlimLineEdit</class>
+   <extends>QWidget</extends>
+   <header>slimlineedit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TagListWidget</class>
+   <extends>QListView</extends>
+   <header>taglistwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

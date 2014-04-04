@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icon_Slider_Off.png</file>
+        <file>Icon_Slider_On.png</file>
+    </qresource>
+</RCC>
